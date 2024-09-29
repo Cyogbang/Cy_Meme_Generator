@@ -68,7 +68,7 @@ export default function Meme() {
         </div>
 
         <button className="memeButton" onClick={getMemesImage}>
-          Get a new meme image <img src="/" alt="meme" />
+          Get a new meme image <img src="./images/Meme-creator.png" alt="meme" />
         </button>
       </div>
       <div className="meme">

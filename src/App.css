@@ -1,36 +1,52 @@
 .App {
   text-align: center;
+  padding: 2rem;
 }
 
 .memePage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
   border: 2px solid purple;
   border-radius: 0.5rem;
   margin: auto;
-  width: 40rem;
+  margin-top: 1rem;
+  max-width: 40rem;
+  height: 95vh;
 }
 
 .appTitle {
+  position: fixed top;
   display: flex;
   line-height: 1;
   align-items: center;
   justify-content: space-between;
-  background-color: purple;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,120,1) 36%, rgba(0,212,255,1) 100%);
   color: white;
   padding: 10px 20px;
-  height: 6rem;
+  height: 3rem;
 }
 
 .headerSubject {
   display: flex;
+  flex-wrap: nowrap;
+  overflow: none;
   align-items: center;
-  width: 50%;
+  width: 100%;
   height: 100%;
+}
+
+.headerSubject img {
+  width: 10%;
 }
 
 .headerTitle {
   display: flex;
   flex-wrap: nowrap;
   overflow: none;
+  width: 50%;
 }
 
 main {
@@ -47,13 +63,21 @@ main {
 
 .memeButton {
   grid-column: 1 / -1;
-  background-color: purple;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,120,1) 36%, rgba(0,212,255,1) 100%);
   color: white;
   border: none;
   border-radius: 0.3rem;
   cursor: pointer;
   margin-top: 2rem;
   height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memeButton img {
+  width: 7%;
 }
 
 #topTXT,
@@ -66,11 +90,12 @@ main {
 }
 
 .memeImage {
-  /* display: flex; */
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,120,1) 36%, rgba(0,212,255,1) 100%);
   margin-top: 0;
   width: 100%;
-  height: fit-content;
-  border: 5px solid purple;
+  height: auto;
+  border: 5px solid transparent;
   border-radius: 0.5rem;
 }
 
@@ -86,7 +111,7 @@ main {
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
-  color: white;
+  color: rgba(0,212,255,1);
   font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -98,34 +123,4 @@ main {
 
 .top {
   top: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
